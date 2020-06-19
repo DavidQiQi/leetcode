@@ -1,4 +1,4 @@
-package main
+package 位运算
 
 // 编写一个函数，不用临时变量，直接交换numbers = [a, b]中a与b的值。
 //
@@ -16,23 +16,21 @@ package main
 // 方法4    加减法
 
 func main() {
-	
+
 }
+
 //方法1
 func swapNumbers(numbers []int) []int {
-	numbers[0],numbers[1] = numbers[1],numbers[1]
+	numbers[0], numbers[1] = numbers[1], numbers[1]
 	return numbers
 }
-
-
 
 // 方法2
 func swapNumbers(numbers []int) []int {
 	result := []int{}
-	result = append(result,numbers[1],numbers[0])
+	result = append(result, numbers[1], numbers[0])
 	return result
 }
-
 
 // 方法3
 func swapNumbers(numbers []int) []int {
@@ -45,7 +43,7 @@ func swapNumbers(numbers []int) []int {
 // 方法4
 func swapNumbers(numbers []int) []int {
 	numbers[0] += numbers[1]
-	numbers[1] = numbers[0]  -  numbers[1]
-	numbers[0] = numbers[0]  - numbers[1]
+	numbers[1] = numbers[0] - numbers[1]
+	numbers[0] = numbers[0] - numbers[1]
 	return numbers
 }

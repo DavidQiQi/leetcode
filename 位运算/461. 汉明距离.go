@@ -1,4 +1,4 @@
-package main
+package 位运算
 
 // 461. 汉明距离
 
@@ -22,15 +22,13 @@ package main
 //
 //上面的箭头指出了对应二进制位不同的位置。
 
-
 // 思考 汉明距离，就是求出相同位 值不通
 // 方法1：  可以把x,y 作为二进制，按位比较
 // 方法2：  使用异或，再用n&(n-1)求出1的个数
 
 func main() {
-	
-}
 
+}
 
 // 方法1：
 func hammingDistance(x int, y int) int {
@@ -41,20 +39,19 @@ func hammingDistance(x int, y int) int {
 		if a != b {
 			count++
 		}
-		x = x >>1
-		y = y >>1
+		x = x >> 1
+		y = y >> 1
 	}
 	return count
 }
-
 
 //方法2：  使用异或，再用n&(n-1)求出1的个数
 func hammingDistance(x int, y int) int {
 	count := 0
 	res := x ^ y
 	for res != 0 {
-		res &= res -1
-		count ++
+		res &= res - 1
+		count++
 	}
 	return count
 }
