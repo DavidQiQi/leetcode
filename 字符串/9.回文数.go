@@ -1,4 +1,4 @@
-package main
+package 字符串
 
 import (
 	"fmt"
@@ -19,13 +19,13 @@ func main() {
 //思路一：
 
 func isPalindrome(x int) bool {
-	if x <0 {
+	if x < 0 {
 		return false
 	}
 	sum := 0
-	tmp :=x
-	for tmp != 0  {
-		sum = sum * 10 + tmp %  10
+	tmp := x
+	for tmp != 0 {
+		sum = sum*10 + tmp%10
 		tmp /= 10
 		fmt.Println(sum)
 	}
@@ -44,8 +44,8 @@ func isPalindrome(x int) bool {
 	}
 	xx := strconv.Itoa(x)
 	xx_len := len(xx)
-	for i:=0;i<xx_len/2;i++ {
-		if xx[i] != xx[xx_len -1] {
+	for i := 0; i < xx_len/2; i++ {
+		if xx[i] != xx[xx_len-1] {
 			return false
 		}
 	}
